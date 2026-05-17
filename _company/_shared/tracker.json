@@ -9,11 +9,13 @@
         "designer"
       ],
       "createdAt": "2026-05-17T03:19:09.236Z",
-      "status": "pending",
+      "status": "done",
       "sessionDir": "2026-05-17T03-03",
       "nudges": 0,
       "priority": "normal",
-      "preAlarmsSent": []
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-17T03-03/_report.md\n- Designer: IAP 티어별 핵심 아트 에셋 디자인 명세(`sessions/2026-05-17T02-18/designer.md`)를 코다리(developer)\n- 코다리: Designer가 제공한 IAP 티어별 아트 에셋 디자인 명세와 코드 일관성 검증 지침(`sessions/2026-05-17T09-final_i\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 🎨 Designer _(Lead Designer)_\n> 📋 **지시**: IAP 티어별 핵심 아트 에셋 디자인 명세(`sessions/2026-05-17T02-18/designer.md`)를 코다리(developer)가 즉시 적용할 수 있도록 최종 고해상도 시각 자료 및 코드 일관성 검증 지침을 확정하여",
+      "completedAt": "2026-05-17T03:36:17.921Z"
     },
     {
       "id": "20260517031909-u9wp",
@@ -24,11 +26,13 @@
         "designer"
       ],
       "createdAt": "2026-05-17T03:19:09.257Z",
-      "status": "pending",
+      "status": "done",
       "sessionDir": "2026-05-17T03-03",
       "nudges": 0,
       "priority": "normal",
-      "preAlarmsSent": []
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-17T03-03/_report.md\n- Designer: IAP 티어별 핵심 아트 에셋 디자인 명세(`sessions/2026-05-17T02-18/designer.md`)를 코다리(developer)\n- 코다리: Designer가 제공한 IAP 티어별 아트 에셋 디자인 명세와 코드 일관성 검증 지침(`sessions/2026-05-17T09-final_i\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 🎨 Designer _(Lead Designer)_\n> 📋 **지시**: IAP 티어별 핵심 아트 에셋 디자인 명세(`sessions/2026-05-17T02-18/designer.md`)를 코다리(developer)가 즉시 적용할 수 있도록 최종 고해상도 시각 자료 및 코드 일관성 검증 지침을 확정하여",
+      "completedAt": "2026-05-17T03:36:17.950Z"
     },
     {
       "id": "20260517031909-sbs8",
@@ -39,11 +43,13 @@
         "designer"
       ],
       "createdAt": "2026-05-17T03:19:09.267Z",
-      "status": "pending",
+      "status": "done",
       "sessionDir": "2026-05-17T03-03",
       "nudges": 0,
       "priority": "normal",
-      "preAlarmsSent": []
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-17T03-03/_report.md\n- Designer: IAP 티어별 핵심 아트 에셋 디자인 명세(`sessions/2026-05-17T02-18/designer.md`)를 코다리(developer)\n- 코다리: Designer가 제공한 IAP 티어별 아트 에셋 디자인 명세와 코드 일관성 검증 지침(`sessions/2026-05-17T09-final_i\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 🎨 Designer _(Lead Designer)_\n> 📋 **지시**: IAP 티어별 핵심 아트 에셋 디자인 명세(`sessions/2026-05-17T02-18/designer.md`)를 코다리(developer)가 즉시 적용할 수 있도록 최종 고해상도 시각 자료 및 코드 일관성 검증 지침을 확정하여",
+      "completedAt": "2026-05-17T03:36:17.969Z"
     },
     {
       "id": "20260517031909-dd0j",
@@ -54,11 +60,13 @@
         "designer"
       ],
       "createdAt": "2026-05-17T03:19:09.282Z",
-      "status": "pending",
+      "status": "done",
       "sessionDir": "2026-05-17T03-03",
       "nudges": 0,
       "priority": "normal",
-      "preAlarmsSent": []
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-17T03-03/_report.md\n- Designer: IAP 티어별 핵심 아트 에셋 디자인 명세(`sessions/2026-05-17T02-18/designer.md`)를 코다리(developer)\n- 코다리: Designer가 제공한 IAP 티어별 아트 에셋 디자인 명세와 코드 일관성 검증 지침(`sessions/2026-05-17T09-final_i\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 🎨 Designer _(Lead Designer)_\n> 📋 **지시**: IAP 티어별 핵심 아트 에셋 디자인 명세(`sessions/2026-05-17T02-18/designer.md`)를 코다리(developer)가 즉시 적용할 수 있도록 최종 고해상도 시각 자료 및 코드 일관성 검증 지침을 확정하여",
+      "completedAt": "2026-05-17T03:36:17.984Z"
     }
   ]
 }
