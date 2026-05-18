@@ -1,5 +1,5 @@
 # 📋 통합 스케줄
-_업데이트: 2026. 5. 18. 오후 12:12:54_
+_업데이트: 2026. 5. 18. 오후 12:53:11_
 
 ## 🤖 에이전트 최근 활동
 ### 🎨 Designer
@@ -7,13 +7,13 @@ _업데이트: 2026. 5. 18. 오후 12:12:54_
 - [2026-05-18] IAPControls.js 구현을 위해 필수적인 MVP 아트 에셋(Basic)의 최종 완료 예상 시점($T_{\text{Asset\_Complete}}$) 및 명세를 즉시 확정하여 제공하라. → 산출물 sessions/2026-05-18T01-03/designer.md
 - [2026-05-18] IAPControls.js 구현에 필요한 MVP 아트 에셋(Basic)의 신뢰도 점수($T_{\text{Asset\_Complete}}$)를 즉시 제공하여 코다리의 작업 시작점을 확정하도록 지원하라. → 산출물 sessions/2026-05-18T02-57/designer.md
 ### 💻 코다리
-- [2026-05-18] 현재 진행 중인 IAPControls.js 구현에 대한 코드 적용 가능 시점($T_{\text{Code\_Start}}$)을 즉시 보고하라. → 산출물 sessions/2026-05-18T00-48/developer.md
-- [2026-05-18] 현재 IAPControls.js 구현의 안정성 상태와 아트 에셋 준비 상황을 바탕으로, 시스템 안정성을 저해하지 않는 선에서 다음 단계의 기능 구현 우선순위를 제시하라. → 산출물 sessions/2026-05-18T01-48/developer.md
-- [2026-05-18] 제공된 아트 에셋 명세와 $R_{Stability}$ 우선순위를 기반으로 IAPControls.js 핵심 로직 구현을 지속하며 시스템 안정성($R_{\text{Stability}}$) 초기 지표를 산출하라. → 산출물 sessions/2026-05-18T02-57/developer.md
+- [2026-05-18] [A.U 히든 커맨드: 💻 코다리 에이전트가 방금 '네온서바이버 샘플팩 (PayPal 통합)' 템플릿 팩 주입받았습니다. 코드 boilerplate 1개 파일 + README. 매트릭스 톤으로 한 줄. "💻 코다리, 네온서바이버 샘플팩 (PayPal 통합) 템플릿 1개 파일 장착. 다음 작업에 자동 활용." 부가 설명 X.] → 산출물 sessions/2026-05-18T03-31/developer.md
+- [2026-05-18] Designer와 Developer로부터 수집되는 아트 에셋 완료 시점($T_{\text{Asset\_Complete}}$)과 코드 적용 가능 시점($T_{\text{Code\_Start}}$) 데이터를 확보하여 $\Delta T$ 모니터링 프레임워크를 실행하고 가장 큰 병목 지점을 구체적으로 분석하라. → 산출물 sessions/2026-05-18T03-27/developer.md
+- [2026-05-18] 이전 작업에서 정의된 '네온서바이버 샘플팩 (PayPal 통합)' 템플릿을 기반으로 웹사이트 구현을 진행하고, PayPal 결제 방식 통합을 동일하게 적용하여 코드를 완성하라. → 산출물 sessions/2026-05-18T03-32/developer.md
 ### 💼 현빈
-- [2026-05-18] 수집된 $\Delta T$ 데이터를 기반으로, 시스템 안정성($R_{Stability}$) 확보를 전제로 하는 다음 1주일 개발 로드맵과 핵심 KPI(특히 수익화 관련 지표)를 재확정하라. → 산출물 sessions/2026-05-18T01-48/business.md
 - [2026-05-18] 수집된 $\Delta T$ 데이터를 기반으로, 시스템 안정성($R_{Stability}$) 확보를 전제로 하는 다음 1주일 개발 로드맵과 핵심 KPI(특히 수익화 관련 지표)에 아트 에셋 전달 및 코드 구현 간의 동기화 지점 해소를 최우선 과제로 설정하여 재확정하라. → 산출물 sessions/2026-05-18T02-18/business.md
 - [2026-05-18] Designer와 Developer로부터 수집되는 아트 에셋 완료 시점($T_{\text{Asset\_Complete}}$)과 코드 적용 가능 시점($T_{\text{Code\_Start}}$) 간의 $\Delta T$ 모니터링 프레임워크를 실행하고 가장 큰 병목 지점을 최종 확정하여 보고하라. → 산출물 sessions/2026-05-18T02-57/business.md
+- [2026-05-18] Developer의 $\Delta T$ 분석 결과를 바탕으로 시스템 안정성($R_{Stability}$)을 극대화하기 위한 다음 1주일 개발 로드맵과 핵심 KPI(수익화 관련 지표)를 재확정하라. → 산출물 sessions/2026-05-18T03-27/business.md
 ### 📱 영숙
 - [2026-05-18] Designer와 Developer로부터 수집되는 아트 에셋 완료 시점($T_{\text{Asset\_Complete}}$)과 코드 적용 가능 시점($T_{\text{Code\_Start}}$) 데이터를 즉시 수집하여 시스템 안정성($R_{Stability}$) 확보를 위한 $\Delta T$ 모니터링 프레임워크 실행 준비를 시작하고, 데이터가 확보되는 대로 통합 보고할 준비를 하라. → 산출물 sessions/2026-05-18T01-33/secretary.md
 - [2026-05-18] Designer와 Developer로부터 수집된 $T_{\text{Asset\_Complete}}$ 및 $T_{\text{Code\_Start}}$ 데이터를 즉시 수집하여 $\Delta T$ 모니터링 프레임워크의 현재 상태를 보고하라. → 산출물 sessions/2026-05-18T01-48/secretary.md
