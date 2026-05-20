@@ -1,0 +1,17 @@
+# 🎨 Designer — 개발팀이 구현할 IAP 전환 흐름의 시각적 컴포넌트($R_{Stability}$ 상태)와 차별화 전략(GLOW/Dynamic Effects) 간의 구체적인 매핑 규칙(Mapping Rule)을 정의하고 명세화하라.
+
+🎨 Designer: 작업 시작합니다.
+
+CEO의 지시사항을 확인했습니다. IAP 전환 흐름의 시각적 컴포넌트와 차별화 전략(GLOW/Dynamic Effects) 간의 구체적인 매핑 규칙을 정의하고 명세화하겠습니다. 이는 시스템 안정성과 시각적 차별화를 완벽히 동기화하기 위한 핵심 설계가 될 것입니다.
+
+이 매핑 규칙을 명세화하는 파일을 생성합니다.
+
+<create_file path="sessions/2026-05-19T21-42/mapping_rule_stability_glow.md"># IAP 시각적 차별화 매핑 규칙: $R_{Stability}$와 GLOW 효과 연동\n\n## 1. 목표 (Objective)\n이 문서는 In-App Purchase(IAP) 전환 흐름 내의 각 시각적 컴포넌트 상태가 시스템 안정성 지표($R_{Stability}$)에 따라 어떤 동적 시각 효과(GLOW/Dynamic Effects)를 발생시켜야 하는지를 정의하는 규칙 세트입니다.\n\n## 2. 핵심 변수 정의 (Key Variables)\n### A. $R_{Stability}$ 상태 (System Stability State)\n시스템의 현재 안정성 수준을 나타내는 내부 지표. 이 값은 코다리 모듈($R_{Stability}$)에서 실시간으로 제공됩니다.\n- **$R_{Stable}$ (High):** 거래 성공, 데이터 무결성 보장 완료. (안정 상태)\n- **$R_{Warning}$ (Medium):** 잠재적 오류 감지, 중간 단계 대기 중. (주의 상태)\n- **$R_{Error}$ (Low):** 거래 실패, 데이터 불일치, 시스템 오류 발생. (위험 상태)\n\n### B. 시각적 차별화 효과 (Visual Differentiation Effects)\n사용자에게 안정성과 전환의 심리적 경험을 전달하기 위해 적용되는 동적 시각 효과.\n- **GLOW (Glow):** 주요 CTA(Call To Action) 및 성공/실패 피드백에 사용되는 빛/광원 효과.\n- **Dynamic Effects:** 상태 변화에 따른 배경, 테두리, 애니메이션의 움직임이나 강도 변화.\n\n## 3. 매핑 규칙 (Mapping Rules)\n각 $R_{Stability}$ 상태에 따라 적용되어야 할 GLOW 및 Dynamic Effects의 구체적인 사양입니다.\n\n### Rule 1: $R_{Stable}$ (안정 상태) — 신뢰와 성공의 표현\n- **GLOW:** 깊고 안정적인 푸른색 계열(Deep Cyan/Sapphire)의 지속적인 미세한 광원 효과. (Static Glow, 낮은 강도)\n- **Dynamic Effects:** 부드럽고 느린 파동(Slow Pulse), 경계선에 은은하게 흐르는 듯한(Subtle Bleed) 움직임. 전환 성공 시에는 밝기가 최대치로 서서히 상승하며 안정감을 표현.\n\n### Rule 2: $R_{Warning}$ (주의 상태) — 신중함과 대기\n- **GLOW:** 중간 채도의 주황색 또는 노란색 계열(Amber/Soft Gold)의 은은한 광원 효과. (Subtle Glow, 중간 강도)\n- **Dynamic Effects:** 느리지만 규칙적인 깜빡임(Slow Blink), 경계선에 미세하게 떨리는(Slight Vibration) 움직임을 적용하여 사용자가 다음 단계로 전환할 준비가 되었음을 알림.\n\n### Rule 3: $R_{Error}$ (위험 상태) — 즉각적인 주의와 중단\n- **GLOW:** 강렬한 빨간색 계열(Vivid Red)의 경고성 광원 효과. (Intense Glow, 최대 강도)\n- **Dynamic Effects:** 빠르게 깜빡이는(Rapid Flicker), 붉은색으로 경계선을 강조하며 즉각적인 주의를 환기시킴. 전환 중단 또는 오류 발생 시, 이 효과는 즉시 중지되거나 정지되어야 함.\n\n## 4. 컴포넌트별 적용 예시 (Component-Specific Examples)\n\n### A. 티어 선택 화면 (Tier Selection Screen)\n- **$R_{Stable}$:** 배경 전체에 Rule 1의 부드러운 파동 효과를 적용하여 선택이 안정적임을 암시.\n- **$R_{Error}$:** 선택 버튼 주변에 Rule 3의 강렬한 경고성 빨간색 GLOW를 순간적으로 발생시켜 즉각적인 오류 인식을 유도.\n\n### B. 구매 흐름 (Purchase Flow - Transaction Stage)\n- **$R_{Stable}$:** 결제 성공 직후, 모든 화면 요소가 Rule 1의 안정적인 푸른빛으로 채워지며 최종 완료를 시각적으로 확정.\n- **$R_{Warning}$:** 대기 중일 때는 Rule 2의 미세한 떨림 효과를 지속하여 사용자의 인내심을 관리.\n\n### C. 결과 피드백 (Result Feedback - Success/Failure)\n- **성공 ($R_{Stable}$):** 화면 전체가 Golden Glow(Rule 1 기반)로 부드럽게 전환되며, 성공 메시지는 밝고 명확하게 표시.\n- **실패 ($R_{Error}$):** 경고성 Red Glow(Rule 3 기반)와 함께 명확한 오류 코드를 강조하여 사용자에게 즉각적인 조치를 요구.\n\n## 5. 디자인 가이드라인 요약 (Summary for Implementation)\n| $R_{Stability}$ 상태 | GLOW 색상/강도 | Dynamic Effect 종류 | 목적 |
+| :--- | :--- | :--- | :--- |
+| **$R_{Stable}$** | Deep Cyan (Low Intensity) | Slow Pulse, Subtle Bleed | 신뢰 및 성공 확정 |
+| **$R_{Warning}$** | Amber/Soft Gold (Medium Intensity) | Slow Blink, Slight Vibration | 주의 및 다음 단계 유도 |
+| **$R_{Error}$** | Vivid Red (High Intensity) | Rapid Flicker, Highlight Border | 즉각적인 오류 인지 및 중단 요구 |
+\n\n이 매핑 규칙은 개발팀이 시각적 차별화 전략을 시스템 안정성 지표에 완벽히 동기화하여 구현할 수 있는 구체적인 명세서입니다. 개발팀은 이 표를 기반으로 실제 CSS/애니메이션 코드를 구현해야 합니다.<|"|>}
+
+📊 평가: 완료 — CEO의 요구사항(IAP 시각적 컴포넌트와 차별화 전략 간의 매핑 규칙 정의 및 명세화)이 구체적인 형식과 함께 완벽하게 정의되었습니다.
+📝 다음 단계: 개발팀에 이 `mapping_rule_stability_glow.md` 파일을 전달하고, 실제 프로토타입 구현 시 참조하도록 지시하겠습니다.
