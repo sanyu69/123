@@ -1,0 +1,29 @@
+{
+  "stability_report": {
+    "endpoint": "/api/stability/report",
+    "method": "GET",
+    "auth_scope": "AdminScope",
+    "required_permission": "WriteAccess",
+    "mock_data_structure": {
+      "status": "success",
+      "R_Stability": 98.5,
+      "timestamp": "2026-05-21T10:00:00Z",
+      "metadata": {
+        "version": "v1.0",
+        "source": "mock_testing"
+      }
+    },
+    "error_simulation": [
+      {
+        "scenario": "Unauthorized",
+        "status_code": 401,
+        "message": "Authentication failed: Missing AdminScope"
+      },
+      {
+        "scenario": "Forbidden",
+        "status_code": 403,
+        "message": "Permission denied: WriteAccess required for update"
+      }
+    ]
+  }
+}
