@@ -1,0 +1,34 @@
+{
+  "stability_endpoints": {
+    "/api/stability/report": {
+      "method": "GET",
+      "requires_scope": ["AdminScope"],
+      "mock_data_source": "Mock_Stability_DB_V1"
+    },
+    "/api/stability/update": {
+      "method": "POST",
+      "requires_scope": ["WriteAccess"],
+      "mock_response": {
+        "status": "success",
+        "message": "Updated successfully",
+        "mocked_id": "MOCK-ID-12345"
+      }
+    },
+    "/api/stability/mock-test": {
+      "method": "POST",
+      "requires_scope": ["TestScope"],
+      "mock_response": {
+        "mockResult": true,
+        "details": [
+          {"test_case": "latency_check", "result": "PASS"},
+          {"test_case": "data_integrity", "result": "PASS"}
+        ]
+      }
+    }
+  },
+  "auth_scopes": {
+    "AdminScope": ["/api/stability/*"],
+    "WriteAccess": ["/api/stability/update"],
+    "TestScope": ["/api/stability/mock-test"]
+  }
+}
