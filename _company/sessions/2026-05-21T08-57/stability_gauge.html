@@ -1,0 +1,110 @@
+<![CDATA[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stability Gauge - R_Stability</title>
+    <style>
+        /* Neon Vibe Design System Integration */
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-blue: #00ffff;
+            --background-color: #1a1a2e; /* Dark background for neon effect */
+            --gauge-bg: #2c2c4d;
+            --text-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .gauge-container {
+            background-color: var(--gauge-bg);
+            border: 3px solid var(--neon-blue);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px var(--neon-pink), 0 0 40px rgba(0, 255, 255, 0.5);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: var(--neon-pink);
+            text-shadow: 0 0 5px var(--neon-pink);
+            margin-bottom: 20px;
+        }
+
+        .stability-value {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 15px 0;
+            color: var(--neon-blue);
+            text-shadow: 0 0 8px var(--neon-blue);
+        }
+
+        .stability-text {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Gauge Visualization Placeholder (Visual element based on R_Stability) */
+        .gauge-visual {
+            width: 100%;
+            height: 30px;
+            background-color: #444; /* Base track color */
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .gauge-fill {
+            height: 100%;
+            width: 0%; /* Initial width, will be updated by JS */
+            background: linear-gradient(90deg, #ff4d6d, var(--neon-pink)); /* Neon Gradient Fill */
+            transition: width 1s ease-in-out;
+            border-radius: 15px;
+        }
+
+        .stability-status {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--neon-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="gauge-container">
+        <h1>System Stability ($R_{Stability}$)</h1>
+        <p class="stability-text">Current Stability Level:</p>
+        
+        <!-- Gauge Visualization -->
+        <div class="gauge-visual">
+            <div class="gauge-fill" id="stabilityFill"></div>
+        </div>
+
+        <!-- Value Display -->
+        <div class="stability-value" id="stabilityValue">0.0%</div>
+        
+        <!-- Status Indicator -->
+        <div class="stability-status" id="stabilityStatus">Calculating...</div>
+    </div>
+
+    <script>
+        // Placeholder for JavaScript logic to handle dynamic updates based on API response
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Stability Gauge UI loaded. Waiting for data stream...");
+            // Future implementation: Fetch stability data from /api/stability/status and update DOM elements.
+        });
+    </script>
+</body>
+</html>
+]]>
