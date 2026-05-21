@@ -1,34 +1,33 @@
 {
-  "endpoint": "/api/stability/status",
-  "method": "GET",
-  "description": "시스템 안정성($R_{Stability}$) 상태 보고",
-  "success_scenarios": [
+  "mock_data": [
     {
-      "status_code": 200,
-      "body": {
-        "timestamp": "2026-05-21T10:00:00Z",
-        "stability_score": 98.5,
-        "metrics": {
-          "cpu_load": 45.2,
-          "memory_usage_percent": 62.1,
-          "latency_ms": 150
-        },
-        "status": "Stable",
-        "dynamic_pricing_gate_status": "Unlocked"
+      "input": "test_ok",
+      "output": {
+        "stability_status": "OK",
+        "r_stability_value": 0.95,
+        "threshold_met": true,
+        "pricing_gate_decision": "ALLOW",
+        "stability_message": "시스템 안정성 최상. 모든 기능 접근 허용."
       }
     },
     {
-      "status_code": 401,
-      "body": {
-        "error": "Unauthorized",
-        "message": "인증 정보가 부족합니다. $R_{Stability}$ 데이터 접근 권한이 없습니다."
+      "input": "test_warning",
+      "output": {
+        "stability_status": "WARNING",
+        "r_stability_value": 0.65,
+        "threshold_met": false,
+        "pricing_gate_decision": "RESTRICTED",
+        "stability_message": "경고: 시스템 안정성 주의 구간. 프리미엄 기능 접근 제한."
       }
     },
     {
-      "status_code": 503,
-      "body": {
-        "error": "Service Unavailable",
-        "message": "시스템 안정성 모니터링 서비스가 일시적으로 중단되었습니다. $R_{Stability}$ 데이터 제공 불가."
+      "input": "test_critical",
+      "output": {
+        "stability_status": "CRITICAL",
+        "r_stability_value": 0.45,
+        "threshold_met": true,
+        "pricing_gate_decision": "DENY",
+        "stability_message": "심각한 불안정: 시스템 안정성 확보를 위해 모든 접근 차단."
       }
     }
   ]
