@@ -1,0 +1,2 @@
+# Instagram Concept 1 Prompt: The Stable Neon
+A sleek, dark-mode UI design for a mobile game interface. Focus on the 'Pro' tier aesthetic. Use deep indigo (#1A0A2C) as the background with sharp, glowing neon outlines in magenta (#FF00FF) and cyan (#00FFFF). Integrate a subtle, stable geometric pattern to symbolize system stability ($R_{Stability}$). High contrast, cyberpunk-neon style. --ar 16:9

@@ -1,0 +1,2 @@
+# Instagram Concept 2 Prompt: The VIP Glow
+A minimalist, elegant UI design for a premium gaming experience (VIP tier). Use a clean white or very light gray background. Apply soft, glowing magenta (#FF00FF) gradients to the main elements and typography. Emphasize smooth, high-end visual flow. Minimalist neon aesthetic. --ar 16:9
