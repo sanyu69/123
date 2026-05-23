@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Launch - Stability Focus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- UI 컴포넌트가 여기에 삽입될 예정 -->
+        <header class="stability-header">
+            <h1>[Game Title]</h1>
+            <div id="stability-indicator" class="stability-indicator">Stability: OK (R_Stability: 1.0)</div>
+        </header>
+        <main id="game-container">
+            <!-- 게임 콘텐츠 영역 -->
+            <div id="game-area">
+                <p>Loading Game Module...</p>
+            </div>
+            <aside id="ui-panel" class="ui-panel">
+                <h2>IAP Tiers</h2>
+                <div class="tier-selection">
+                    <!-- Basic, Pro, VIP UI will be injected here -->
+                    <button class="tier basic-tier" data-tier="basic">Basic</button>
+                    <button class="tier pro-tier" data-tier="pro">Pro ($)</button>
+                    <button class="tier vip-tier" data-tier="vip">VIP (💎)</button>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
