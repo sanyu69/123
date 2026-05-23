@@ -77,11 +77,13 @@
         "secretary"
       ],
       "createdAt": "2026-05-23T03:49:07.151Z",
-      "status": "pending",
+      "status": "done",
       "sessionDir": "2026-05-23T03-42",
       "nudges": 0,
       "priority": "normal",
-      "preAlarmsSent": []
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-23T03-42/_report.md\n- 영숙: 최종 $T_{Launch}$ 시점을 기준으로 Instagram 사전 홍보 일정 및 배포 준비 체크리스트를 재확인하여 최종 마케팅 일정을 확정하고\n- Designer: 확정된 $T_{Launch}$ 시점과 전략 B(가치 기반 프리미엄)에 맞춰 웹사이트 출시용 디자인 및 비주얼 요소의 최종 수정 계획을 수립하라.\n- Instagram: 최종 확정된 마케팅 일정과 디자인 요구사항을 바탕으로, 웹사이트 출시를 위한 인스타그램 게시물 및 스토리용 최종 캡션(Hook 포함), 해시태그\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: 최종 $T_{Launch}$ 시점을 기준으로 Instagram 사전 홍보 일정 및 배포 준비 체크리스트를 재확인하여 최종 마케팅 일정을 확정하고 보고하라.\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 ",
+      "completedAt": "2026-05-23T04:00:01.599Z"
     },
     {
       "id": "20260523034907-exs7",
@@ -92,11 +94,13 @@
         "secretary"
       ],
       "createdAt": "2026-05-23T03:49:07.168Z",
-      "status": "pending",
+      "status": "done",
       "sessionDir": "2026-05-23T03-42",
       "nudges": 0,
       "priority": "normal",
-      "preAlarmsSent": []
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-23T03-42/_report.md\n- 영숙: 최종 $T_{Launch}$ 시점을 기준으로 Instagram 사전 홍보 일정 및 배포 준비 체크리스트를 재확인하여 최종 마케팅 일정을 확정하고\n- Designer: 확정된 $T_{Launch}$ 시점과 전략 B(가치 기반 프리미엄)에 맞춰 웹사이트 출시용 디자인 및 비주얼 요소의 최종 수정 계획을 수립하라.\n- Instagram: 최종 확정된 마케팅 일정과 디자인 요구사항을 바탕으로, 웹사이트 출시를 위한 인스타그램 게시물 및 스토리용 최종 캡션(Hook 포함), 해시태그\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: 최종 $T_{Launch}$ 시점을 기준으로 Instagram 사전 홍보 일정 및 배포 준비 체크리스트를 재확인하여 최종 마케팅 일정을 확정하고 보고하라.\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 ",
+      "completedAt": "2026-05-23T04:00:01.610Z"
     },
     {
       "id": "20260523034907-ecos",
@@ -107,11 +111,13 @@
         "secretary"
       ],
       "createdAt": "2026-05-23T03:49:07.176Z",
-      "status": "pending",
+      "status": "done",
       "sessionDir": "2026-05-23T03-42",
       "nudges": 0,
       "priority": "normal",
-      "preAlarmsSent": []
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-23T03-42/_report.md\n- 영숙: 최종 $T_{Launch}$ 시점을 기준으로 Instagram 사전 홍보 일정 및 배포 준비 체크리스트를 재확인하여 최종 마케팅 일정을 확정하고\n- Designer: 확정된 $T_{Launch}$ 시점과 전략 B(가치 기반 프리미엄)에 맞춰 웹사이트 출시용 디자인 및 비주얼 요소의 최종 수정 계획을 수립하라.\n- Instagram: 최종 확정된 마케팅 일정과 디자인 요구사항을 바탕으로, 웹사이트 출시를 위한 인스타그램 게시물 및 스토리용 최종 캡션(Hook 포함), 해시태그\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: 최종 $T_{Launch}$ 시점을 기준으로 Instagram 사전 홍보 일정 및 배포 준비 체크리스트를 재확인하여 최종 마케팅 일정을 확정하고 보고하라.\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 ",
+      "completedAt": "2026-05-23T04:00:01.617Z"
     },
     {
       "id": "20260523034907-zjph",
@@ -122,11 +128,13 @@
         "secretary"
       ],
       "createdAt": "2026-05-23T03:49:07.186Z",
-      "status": "pending",
+      "status": "done",
       "sessionDir": "2026-05-23T03-42",
       "nudges": 0,
       "priority": "normal",
-      "preAlarmsSent": []
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-23T03-42/_report.md\n- 영숙: 최종 $T_{Launch}$ 시점을 기준으로 Instagram 사전 홍보 일정 및 배포 준비 체크리스트를 재확인하여 최종 마케팅 일정을 확정하고\n- Designer: 확정된 $T_{Launch}$ 시점과 전략 B(가치 기반 프리미엄)에 맞춰 웹사이트 출시용 디자인 및 비주얼 요소의 최종 수정 계획을 수립하라.\n- Instagram: 최종 확정된 마케팅 일정과 디자인 요구사항을 바탕으로, 웹사이트 출시를 위한 인스타그램 게시물 및 스토리용 최종 캡션(Hook 포함), 해시태그\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: 최종 $T_{Launch}$ 시점을 기준으로 Instagram 사전 홍보 일정 및 배포 준비 체크리스트를 재확인하여 최종 마케팅 일정을 확정하고 보고하라.\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 ",
+      "completedAt": "2026-05-23T04:00:01.624Z"
     }
   ]
 }
