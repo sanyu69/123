@@ -1,0 +1,57 @@
+{
+  "data_version": "1.0",
+  "timestamp": "<현재_시간>",
+  "metrics": {
+    "aesthetic_differentiator_score_ads": {
+      "description": "미학적 경험의 독점성 지표 (ADS)",
+      "units": "Score (0-100)",
+      "definition": "Cyan/Magenta 비주얼 차별화로 측정된 경험 독점도.",
+      "source": "Designer_Input"
+    },
+    "conversion_rate_cr": {
+      "description": "전환율 지표 (CR)",
+      "units": "Ratio (0.0 - 1.0)",
+      "definition": "특정 티어 간의 전환 발생 비율.",
+      "source": "Model_Simulation"
+    },
+    "revenue_rate_rr": {
+      "description": "수익률 지표 (RR)",
+      "units": "Ratio (0.0 - 1.0)",
+      "definition": "실제 수익 발생 비율.",
+      "source": "Model_Simulation"
+    },
+    "success_rate_s_success": {
+      "description": "수익화 성공률 ($S_{Success}$)",
+      "units": "Ratio (0.0 - 1.0)",
+      "definition": "IAP 가격 전략에 따른 수익화 목표 달성 확률.",
+      "source": "IAP_Strategy"
+    }
+  },
+  "tier_performance": [
+    {
+      "tier_name": "Basic",
+      "ads_score": 30,
+      "cr": 0.15,
+      "rr": 0.05,
+      "s_success_prediction": 0.65
+    },
+    {
+      "tier_name": "Pro",
+      "ads_score": 70,
+      "cr": 0.35,
+      "rr": 0.15,
+      "s_success_prediction": 0.80
+    },
+    {
+      "tier_name": "VIP",
+      "ads_score": 95,
+      "cr": 0.60,
+      "rr": 0.30,
+      "s_success_prediction": 0.95
+    }
+  ],
+  "model_parameters": {
+    "target_variable": "S_Success",
+    "input_variables": ["ads_score", "cr", "rr"]
+  }
+}
