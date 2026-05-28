@@ -1,0 +1,154 @@
+<![CDATA[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Survivor Game</title>
+    <style>
+        /* Deep Black Background */
+        body {
+            background-color: #000000;
+            color: #00FFFF; /* Cyan Neon Glow Base */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Cyan Neon Glow Effect */
+        @keyframes neonGlow {
+            0% { text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF; }
+            50% { text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF; }
+            100% { text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF; }
+        }
+
+        #game-container {
+            position: relative;
+            width: 800px; /* Example size */
+            height: 600px; /* Example size */
+            border: 3px solid #00FFFF;
+            box-shadow: 0 0 15px #00FFFF, inset 0 0 10px #00FFFF;
+        }
+
+        .game-canvas {
+            display: block;
+        }
+
+        /* UI Elements Stability Principle */
+        .ui-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Stability: Input blocking disabled */
+            z-index: 10;
+        }
+
+        .hud {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            text-shadow: 0 0 8px #00FFFF, 0 0 15px #00FFFF;
+        }
+
+        .health-bar-container {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 200px;
+            height: 20px;
+            border: 2px solid #00FFFF;
+            box-shadow: 0 0 5px #00FFFF;
+        }
+
+        .health-bar {
+            height: 100%;
+            background-color: #333;
+            transition: width 0.1s linear; /* Smooth but controlled transition */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" class="game-canvas"></canvas>
+        <!-- UI Overlay for stable display -->
+        <div class="ui-overlay">
+            <div class="hud">Score: <span id="scoreDisplay">0</span></div>
+            <div class="health-bar-container">
+                Health: <div id="healthBar" class="health-bar" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Core Game Loop and Stability Logic (Placeholder)
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const healthBar = document.getElementById('healthBar');
+
+        // --- R_Stability Focus: Minimal State Changes & Transform Use ---
+
+        let gameState = {
+            score: 0,
+            health: 100,
+            enemies: [],
+            player: { x: canvas.width / 2, y: canvas.height / 2, size: 10 }
+        };
+
+        function updateHUD() {
+            scoreDisplay.textContent = gameState.score;
+            // Stability: Only change width property for health bar
+            healthBar.style.width = `${gameState.health}%`;
+        }
+
+        function draw() {
+            // Clear screen (Deep Black)
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw Player (Simple Circle for stability)
+            ctx.beginPath();
+            ctx.arc(gameState.player.x, gameState.player.y, gameState.player.size, 0, Math.PI * 2);
+            ctx.fillStyle = '#00FFFF'; // Cyan Neon
+            ctx.shadowBlur = 15;
+            ctx.shadowColor = '#00FFFF';
+            ctx.fill();
+            ctx.shadowBlur = 0; // Reset shadow for other elements
+
+            // Draw Game State (Placeholder)
+            ctx.fillStyle = '#FFFFFF';
+            ctx.font = '30px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(`R_Stability: ${gameState.health}%`, canvas.width / 2, 50);
+
+            // Placeholder for Enemies/Game Logic would go here...
+        }
+
+        function gameLoop() {
+            updateHUD();
+            draw();
+            // In a real scenario, enemy movement and collision logic would be implemented here, strictly using transform/linear properties.
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Initialize Canvas Size based on container dimensions (for responsiveness)
+        const gameContainer = document.getElementById('game-container');
+        canvas.width = gameContainer.clientWidth;
+        canvas.height = gameContainer.clientHeight;
+
+
+        // Start the loop
+        gameLoop();
+
+    </script>
+</body>
+</html>
+]]>
