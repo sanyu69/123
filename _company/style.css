@@ -1,0 +1,74 @@
+/* Neon Vibe Palette 적용 */
+:root {
+    --neon-pink: #ff00ff; /* 핵심 강조 색상 (System Gauge MAX에서 도출) */
+    --dark-bg: #1a0a2e; /* 어두운 배경 */
+    --text-color: #ffffff;
+    --accent-glow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink); /* 네온 글로우 효과 */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* 기본 폰트 설정. 실제로는 Neon Vibe에 맞는 폰트를 사용해야 함 (추후 수정 필요) */
+    background-color: var(--dark-bg);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-banner {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #2a1540 100%);
+    border: 3px solid var(--neon-pink);
+    box-shadow: var(--accent-glow);
+    border-radius: 15px;
+}
+
+.gauge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gauge-image {
+    width: 80%; /* 이미지 크기 조정 */
+    max-width: 400px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: var(--accent-glow);
+}
+
+.text-content h1 {
+    font-size: 3em;
+    color: var(--neon-pink);
+    text-shadow: var(--accent-glow);
+    margin-bottom: 10px;
+}
+
+.text-content .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--neon-pink);
+    color: var(--dark-bg);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 0, 255, 0.7);
+}
+
+.cta-button:hover {
+    background-color: #ff4dff;
+    transform: translateY(-3px);
+}
