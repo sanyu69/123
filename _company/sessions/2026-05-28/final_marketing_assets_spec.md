@@ -1,0 +1,1 @@
+# 마케팅 소재 최종 디자인 명세 (The System Gauge 적용)
