@@ -2,11 +2,11 @@
 
 🎨 Designer: 작업 시작합니다.
 
-기존의 $R_{Stability}$-Compliant 원칙과 모든 이전 의사결정 로그를 기반으로, 개발 착수에 필요한 핵심 디자인 컴포넌트 및 시각적 명세서(`designer.md`)를 재구성하고 확정합니다. 이는 시스템 안정성($R_{Stability}$)을 시각적으로 표현하는 것을 최우선 목표로 합니다.
+# 최종 디자인 컴포넌트 명세서: $R_{Stability}$-Compliant 랜딩 페이지의 $R_{Stability}$-Compliant 원칙과 모든 이전 의사결정 로그를 기반으로, 개발 착수에 필요한 핵심 디자인 컴포넌트 및 시각적 명세서(`designer.md`)를 재구성하고 확정합니다. 이는 시스템 안정성($R_{Stability}$)을 시각적으로 표현하는 것을 최우선 목표로 합니다.
 
 파일을 재구성하여 `sessions/2026-05-29T22-28/designer.md`에 최종 내용을 덮어씁니다.
 
-<edit_file path="sessions/2026-05-29T22-28/designer.md"><find>기존</find><replace>
+<edit_file path="sessions/2026-05-29T22-28/designer.md"><find># 최종 디자인 컴포넌트 명세서: $R_{Stability}$-Compliant 랜딩 페이지</find><replace>
 # ✨ $R_{Stability}$-Compliant Visual System & Design Specification (Final)
 
 ## 1. Brand Identity: Neon Vibe & Stability Mapping
