@@ -8,29 +8,25 @@
 </head>
 <body>
 
-    <div id="featureGateCTA_Container" class="feature-gate-container default-state">
-        <!-- 기능 잠금 상태 (잠정적으로 숨김) -->
-        <div class="gate-locked hidden">
-            <div class="icon neon-alert">🔒</div>
-            <h2>접근 제한</h2>
-            <p>이 기능을 사용하려면 VIP 등급으로 업그레이드하세요.</p>
-            <a href="/upgrade" class="cta-button upgrade-btn">VIP로 업그레이드하기</a>
+    <div class="feature-gate-container">
+        <!-- IAP 티어 선택 영역 -->
+        <div class="iap-tiers">
+            <div class="tier basic-tier">
+                <h3>Basic (₩29.99)</h3>
+                <p>기본 기능 접근</p>
+                <button class="cta-btn unlock-pro" data-tier="pro">Pro로 업그레이드</button>
+            </div>
+            <div class="tier pro-tier">
+                <h3>Pro (₩49.99)</h3>
+                <p>고급 기능 접근</p>
+                <button class="cta-btn unlock-vip" data-tier="vip">VIP로 업그레이드</button>
+            </div>
         </div>
 
-        <!-- 정상 상태 (CTA 강조) -->
-        <div class="gate-active visible">
-            <div class="icon neon-success">✨</div>
-            <h2>기능 잠금 해제</h2>
-            <p>지금 바로 이 강력한 기능을 경험하세요!</p>
-            <a href="/feature" class="cta-button access-btn">기능 사용 시작</a>
-        </div>
-
-        <!-- 오류/안정성 경고 상태 (System Stability Alert) -->
-        <div class="gate-error hidden">
-             <div class="icon neon-danger">⚠️</div>
-            <h2>시스템 안정성 경고</h2>
-            <p>데이터 동기화 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.</p>
-            <a href="#" class="cta-button retry-btn">재시도하기</a>
+        <!-- 시스템 상태 표시 영역 -->
+        <div class="system-status">
+            <div class="status-indicator" id="stability-status">시스템 안정성: 준비 완료</div>
+            <div class="error-message" id="error-message"></div>
         </div>
     </div>
 
