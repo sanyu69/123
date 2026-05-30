@@ -1,65 +1,55 @@
-/**
- * Feature Gating Service
- * $R_{Stability}$ 기반 접근 제어 로직 구현
- */
+import { Pool } from 'pg'; // PostgreSQL 환경 가정
+import { SQLQueryRunner } from './db/queryRunner'; // 데이터베이스 연결 및 쿼리 실행을 위한 추상화된 모듈 가정
 
-interface SubscriptionTier {
-    tier: 'Basic' | 'Pro' | 'VIP';
-}
-
-// 가격 구조 매핑 (실제 DB 정책과 동기화 필요)
-const TIER_MAPPING: Record<SubscriptionTier['tier'], { [key: string]: boolean }> = {
-    Basic: {
-        'Ad-free': false, // Pro 이상에서 true
-        'Unlimited Saves': false, // Pro 이상에서 true
-        'Exclusive Content': false // VIP 이상에서 true
-    },
-    Pro: {
-        'Ad-free': true,
-        'Unlimited Saves': true,
-        'Exclusive Content': false // VIP 이상에서 true
-    },
-    VIP: {
-        'Ad-free': true,
-        'Unlimited Saves': true,
-        'Exclusive Content': true
-    }
-};
+// DB 연결 정보는 환경 변수에서 로드한다고 가정합니다.
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL || 'postgres://user:password@host:port/dbname'
+});
 
 /**
- * 사용자 권한을 기반으로 기능 접근을 검증합니다.
- * @param userId DB에서 조회된 사용자 ID
- * @param featureName 요청된 기능 이름 (예: 'ad_free', 'unlimited_saves')
- * @returns 기능 접근 가능 여부 (boolean)
+ * 사용자의 현재 구독 티어를 기반으로 특정 기능에 대한 접근 권한을 검증합니다.
+ * @param userId 검증할 사용자 ID
+ * @param featureName 검증할 기능 이름 (예: 'pro_level_unlock')
+ * @returns FeatureAccessResult - 접근 가능 여부 및 관련 안정성 정보
  */
-export async function checkFeatureAccess(userId: string, featureName: string): Promise<boolean> {
-    // 1. 사용자 정보 조회 (DB 호출 시뮬레이션)
-    const user = await db.getUser(userId); // 실제 DB 연결 로직 필요
+export async function checkFeatureAccess(userId: number, featureName: string): Promise<{ isAccessible: boolean; stabilityScore: number }> {
+    // 1. 사용자 티어 ID 조회
+    const userTierResult = await pool.query(
+        `SELECT tier_id FROM user_tiers WHERE user_id = $1 AND status = 'active'`,
+        [userId]
+    );
 
-    if (!user) {
-        throw new Error("User not found.");
+    if (userTierResult.rows.length === 0) {
+        // 사용자 구독 정보가 없으면 기본적으로 접근 불가 처리 ($R_{Stability}$ 우선)
+        console.error(`[ERROR] User ID ${userId} has no active subscription.`);
+        return { isAccessible: false, stabilityScore: 0 };
     }
 
-    const tier = user.subscription_tier;
+    const userTierId = userTierResult.rows[0].tier_id;
 
-    // 2. 권한 매핑 확인
-    const requiredAccess = TIER_MAPPING[tier];
-    
-    if (!requiredAccess) {
-        // 알 수 없는 티어일 경우, 기본적으로 거부 (안정성 우선)
-        console.warn(`Unknown tier for user ${userId}: ${tier}`);
-        return false;
+    // 2. 기능 접근 권한 조회 (JOIN을 통해 티어와 기능을 연결)
+    const accessResult = await pool.query(
+        `SELECT fa.access_level, ft.stability_level
+         FROM feature_access fa
+         JOIN feature_tiers ft ON fa.tier_id = ft.tier_id
+         WHERE fa.tier_id = $1 AND fa.feature_id = (SELECT feature_id FROM features WHERE feature_name = $2)`,
+        [userTierId, featureName]
+    );
+
+    if (accessResult.rows.length === 0) {
+        // 해당 기능에 대한 명시적인 매핑이 없으면 기본적으로 잠금 처리
+        console.warn(`[WARNING] Feature ${featureName} access mapping not found for Tier ID ${userTierId}. Defaulting to restricted.`);
+        return { isAccessible: false, stabilityScore: 0 };
     }
 
-    const isAllowed = requiredAccess[featureName];
+    const accessRecord = accessResult.rows[0];
 
-    if (isAllowed === undefined) {
-        // 정의되지 않은 기능에 대한 접근 시도 방지
-        throw new Error(`Feature ${featureName} is not defined in the current plan.`);
-    }
+    // 3. $R_{Stability}$ 기반 최종 결정
+    const isAccessible = accessRecord.access_level === 'ENABLED';
+    const stabilityScore = accessRecord.stability_level; // 티어의 안정성 레벨 반환
 
-    return isAllowed;
+    return { isAccessible, stabilityScore };
 }
 
-// 테스트용 모듈 (실제 실행은 DB 연결 필요)
-export { TIER_MAPPING };
+// DB 풀 종료 (필요한 경우)
+// pool.end();
